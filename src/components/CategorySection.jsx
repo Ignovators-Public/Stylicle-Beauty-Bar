@@ -10,7 +10,7 @@ const categories = [
   { name: "Frisørsalon", icon: "/assets/category/frisorsalon.png" },
   { name: "Wellness", icon: "/assets/category/wellnesscenter.png" },
   { name: "Barberson", icon: "/assets/category/barbersalon.png" },
-  { name: "Massageklinik", icon: "/assets/category/massageklinik.png" },
+  { name: "Massage klinik", icon: "/assets/category/massageklinik.png" },
   { name: "Fodterapeut", icon: "/assets/category/fodterapeut.png" },
 ];
 
@@ -38,11 +38,14 @@ const CategorySection = () => {
           <SwiperSlide key={index}>
             <div className="flex flex-col items-center text-center">
               <div className="w-full rounded-full flex items-center justify-center">
-                <img src={cat.icon} alt={cat.name} className="w-20" />
+                <img src={cat.icon} alt={cat.name} className="sm:w-20 w-10" />
               </div>
-              <span className="text-[#3a1d2f] font-medium">{cat.name}</span>
+              <span className="text-[#3a1d2f] font-medium text-sm md:text-lg lg:text-xl">
+                {cat.name}
+              </span>
             </div>
           </SwiperSlide>
+
         ))}
       </Swiper>
 
